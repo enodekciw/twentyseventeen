@@ -10,5 +10,5 @@
 
 ?>
 <div class="site-info">
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyseventeen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyseventeen' ), 'WordPress' ); ?></a>
+	<?php printf( wp_kses( __( '<a href="%s">%s</a>', 'twentyseventeen' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( __( 'https://wordpress.org/', 'twentyseventeen' ) ), sprintf( __( 'Proudly powered by %s', 'twentyseventeen' ), 'WordPress' ) ); ?>
 </div><!-- .site-info -->
